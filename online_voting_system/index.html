@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <title>Online Voting System</title>
+</head>
+<body>
+
+  <style>
+    #testid{
+      height: 100px;
+    }
+      .testi{
+        padding: 10px;
+        
+      }
+     .testi .testi_container{
+     
+       margin-right:1px;
+       margin-left: 1px;
+       background-size: cover;
+      }
+      .testi .testi_container .item{
+          
+       
+          text-align: center;
+          width: 100%;
+          
+          padding: 20px;
+          
+          height: 400px;
+          background-color: aliceblue;
+          box-shadow: none;
+         
+      } 
+     
+  </style>
+  
+    <center>
+    <div id="headersection">
+      <h1>Online Voting System</h1>
+        <marquee>वोट डालने जाना हैं, अपना फ़र्ज निभाना हैं    &emsp14; &emsp14; &emsp14;&emsp14;  छोड़ के अपने सारे काम, पहले चलो करें मतदान.</marquee>
+       
+    </div>
+    <hr>
+   <div id="bodysection">
+    <form action="api_connect/login.php" method="post" enctype="multipart/form-data">
+        <h2>Login</h3>
+        <input type="number" name="mobile" id="" placeholder="Enter mobile"> 
+        <br>
+        <br>
+        <input type="password" name="password" id="" placeholder="Enter password">
+        <br>
+        <br>
+        <select name="role" id="dropbox">
+            <option value="1">Voter</option>
+            <option value="2">Group</option>
+        </select>
+        <br>
+        <br>
+        <button id="loginbtn" type="submit">Login</button>
+        <br>
+        <br>
+        New user?<a href="routes/register.html">Register here</a>
+        <br><br><br>
+    </form>
+   </div>
+</center> 
+
+<div class="w3-content w3-section " id='img'>
+  <img class="mySlides" alt='' src="image/electionfirst.jpg"
+      style="width:100%; height:450px;">
+  <img class="mySlides" alt='' src="image/electionsecond.jpg"
+      style="width:100%; height:450px;">
+  <img class="mySlides" alt='' src="image/electionthird.jpg"
+      style="width:100%; height:450px;">
+  <img class="mySlides" alt='' src="image/electionfour.jpg"
+      style="width:100%; height:450px;">
+ 
+</div>
+<script>var myIndex = 0;
+  carousel();
+
+  function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+  }</script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+ <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+   integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>
